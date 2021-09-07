@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+
+#root{
+    height: inherit;
+}
+
+html,body {
+    font-family: "Roboto", sans-serif;
+    /* overflow-x: hidden; */
+    background: rgb(35,40,64);
+    height: 100%;
+}
+*::before,
+*::after,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* brand styling */
+.brand_styling{
+    font-family: 'Dosis', sans-serif;
+}
+
+/* dropdown menu header */
+.menu_user .dropdown-menu{
+    left:-100% !important;
+}
+
+.purchase_placeholder_token::placeholder {
+    color: rgb(177, 179, 184);
+}
+.purchase_placeholder_token::-webkit-outer-spin-button,
+.purchase_placeholder_token::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.purchase_placeholder_token {
+    -moz-appearance: textfield;
+}
+
+.href_style_text{
+    cursor: pointer;
+}
+.href_style_text:hover{
+    text-decoration: underline;
+}
+
+.react-es-searchbox{
+    max-width: 60%;
+    margin: auto;
+    background: transparent;
+    z-index: 2;
+}
+
+.react-es-searchbox > input{
+    width: 100%;
+    border-radius: 20px;
+    padding: 7px 20px;
+    border: none;
+    box-shadow: 0px 0px 10px 3px black;
+    outline: none;
+    z-index: 2;
+}
+
+.text_primary{
+    color:lightcyan;
+}
+
+.nav-item.active{
+    background: transparent;
+}
+
+.nav-item:hover{
+    border:none;
+    color:lightcoral;
+}
+
+.nav-tabs .nav-link.active{
+    border:none;
+    color:lightgreen;
+    border-bottom: 1px solid lightgreen;
+    background: transparent;
+}
+
+.react-confirm-alert-overlay{
+    z-index: 1000000 !important;
+}
+
+.interaction_bar_icon:hover{
+    color:lightcoral;
+}

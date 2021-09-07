@@ -1,0 +1,34 @@
+\chapter{ĐÓNG GÓI}
+
+\section{Sản Phẩm Phần Mềm}
+
+\begin{center}
+\begin{longtabu} to \textwidth {| m{3cm} | m{3cm} | m{5cm} | m{4cm} |}
+\caption{Mô tả các thành phần} \\
+   \hline \textbf{STT}  & \textbf{Thành phần} & \textbf{Mô tả}  \\ \hline
+   \endfirsthead
+   \hline \textbf{STT}  & \textbf{Thành phần} & \textbf{Mô tả}  \\ \hline   \endhead
+      1 & Source.zip  & Source files
+      \\ \hline
+      2 & Database.zip  & File cơ sở dữ liệu 
+      \\ \hline
+      3 & Presentation.ppt  & File trình chiếu 
+      \\ \hline
+      4 & Report.pdf  & File báo cáo
+      \\ \hline
+\end{longtabu}
+\end{center}
+
+\section{Hướng Dẫn Cài Đặt}
+
+\begin{itemize}
+ \item[\ding{51}] Bước 1: Trước tiên bạn phải cài đặt môi trường NodeJS version mới nhất (https://nodejs.org/en/).
+ \item[\ding{51}] Bước 2: Cài đặt cơ sở dữ liệu MySQL. MySQL Community Server và MySQL WorkBench (https://dev.mysql.com/downloads/). 
+  \item[\ding{51}] Bước 3: Tạo user và password user trong MySQL và thực thi các file sql trong thư mục database để khởi tạo các table, procedures,...
+  \item[\ding{51}] Bước 4: Tạo user và password user trong MySQL và thực thi các file sql trong thư mục database để khởi tạo các table, procedures,...
+  \item[\ding{51}] Bước 5: Vào file theo đường dẫn "/web\_streaming/client/server/utilities/connection.js" để tinh chỉnh lại cấu hình thông tin user MySQL cho phù hợp.
+  \item[\ding{51}] Bước 6: Cài đặt các node packages cần thiết cho ứng dụng. Chạy "npm install --legacy-peer-deps" trong Command Prompt/Terminal.
+  \item[\ding{51}] Bước 7: Tiến hành thực thi câu lệnh "npm run concurrently" để start package's script của server và client trong project. Hoặc chạy theo thứ tự "npm run devServer" và "npm run devClient" tương ứng.
+  \item[\ding{51}] Bước 8: Mở trình duyệt lên. Vào link "http://localhost:3000" để truy cập vào web app.
+  
+\end{itemize}

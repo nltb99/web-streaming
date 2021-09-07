@@ -1,0 +1,369 @@
+\chapter{THỰC HIỆN}
+\section{Giao Diện}
+
+
+\begin{center}
+\begin{figure}[H]
+\begin{tabular}{cc}
+  \includegraphics[width=8.5cm, height=8cm]{./imgs/layouts/home} &   \includegraphics[width=8.5cm, height=8cm]{./imgs/layouts/streamer} \\
+Trang chủ & Trang Streamer \\[6pt]
+\end{tabular}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+\begin{tabular}{cc}
+  \includegraphics[width=8.5cm, height=8cm]{./imgs/layouts/viewer} &   \includegraphics[width=8.5cm,height=8cm]{./imgs/layouts/option_buy} \\
+Trang Viewer & Trang mua token \\[6pt]
+\end{tabular}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+\begin{tabular}{cc}
+  \includegraphics[width=8.5cm,height=8cm]{./imgs/layouts/proceed_to_payment} &   \includegraphics[width=8.5cm,height=8cm]{./imgs/layouts/donate} \\
+Trang thanh toán & Trang donate \\[6pt]
+\end{tabular}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+\begin{tabular}{cc}
+  \includegraphics[width=8.5cm,height=8cm]{./imgs/layouts/profile} &   \includegraphics[width=8.5cm,height=8cm]{./imgs/layouts/history_donate} \\
+Trang hồ sơ & Trang lịch sử donate \\[6pt]
+\end{tabular}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+\begin{tabular}{cc}
+  \includegraphics[width=8.5cm,height=8cm]{./imgs/layouts/history_tokens} &   \includegraphics[width=8.5cm,height=8cm]{./imgs/layouts/videos} \\
+Trang lịch sử token & Trang danh sách video \\[6pt]
+\end{tabular}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+\begin{tabular}{cc}
+  \includegraphics[width=8.5cm,height=8cm]{./imgs/layouts/history_tokens} &   \includegraphics[width=8.5cm,height=8cm]{./imgs/layouts/videos} \\
+Trang lịch sử token & Trang danh sách video \\[6pt]
+\end{tabular}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+\begin{tabular}{cc}
+  \includegraphics[width=8.5cm,height=8cm]{./imgs/layouts/users} &   \includegraphics[width=8.5cm,height=8cm]{./imgs/layouts/statistics} \\
+Trang danh sách người dùng & Trang thống kê \\[6pt]
+\end{tabular}
+\end{figure}
+\end{center}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Sơ Đồ Kiến Trúc Công Nghệ}
+
+\section{Các Loại Sơ Đồ}
+%%%%%%%%%%%%%%%%%% CONTROLLER %%%%%%%%%%%%%%%%%%
+\subsection{Controller}
+
+
+%%%%%%%%%%%%%%%%%% USER CONTROLLER %%%%%%%%%%%%%%%%%%
+
+\subsubsection{User\_Controller}
+\begin{center}
+	\includegraphics[width=17cm]{{./imgs/stores/user_controller}}
+\end{center}
+
+\begin{center}
+\begin{longtabu} to \textwidth {| m{5cm} | m{5cm} | m{5cm} |}
+\caption{Các trường} \\
+   \hline \textbf{Tên}  & \textbf{Kiểu} & \textbf{Mô tả}  \\ \hline
+   \endfirsthead
+   \hline \textbf{Tên}  & \textbf{Kiểu} & \textbf{Mô tả}  \\ \hline
+   \endhead
+      userprocedure & UserProcedure  & Làm việc với dữ liệu user
+      \\ \hline
+      upoad & UploadImage  & Làm việc với hình ảnh
+      \\ \hline
+      token & AuthToken  & Làm việc với security
+      \\ \hline
+\end{longtabu}
+\end{center}
+
+\begin{center}
+\begin{longtabu} to \textwidth {| m{3cm} | m{4cm} | m{4cm} | m{4cm} |}
+\caption{Các phương thức} \\
+   \hline \textbf{Tên}  & \textbf{Tham số} & \textbf{Kiểu trả về}  & \textbf{Mô tả}  \\ \hline
+   \endfirsthead
+   \hline \textbf{Tên}  & \textbf{Tham số} & \textbf{Kiểu trả về}  & \textbf{Mô tả}  \\ \hline
+   \endhead
+      subscribe & isSubcribe, hostId, followerId  & View User Layout & Truy vấn loại User hiển thị lên layout
+      \\ \hline
+      uploadRole & userId  & View User Layout & Chuyển đổi vai trò của tài khoản
+      \\ \hline
+      allUers & search  & View User danh sách & Tìm kiếm user theo từ khóa
+      \\ \hline
+      userInfo & userId  & View User chi tiết & Xem chi tiết user bằng mã user
+      \\ \hline
+      profile & nickname, hostId  & View User chi tiêt & Xem chi tiết profile 
+      \\ \hline
+      saveAvatar & fileName, image, userId  & View User layout & Lưu hình ảnh User
+      \\ \hline
+      updateProfile & id, fullName, nickName, bio  & View User Chi tiêt & Cập nhật thông tin
+      \\ \hline
+      donateHistory & userId  & View User Chi tiêt & Lưu thông tin donate
+      \\ \hline
+\end{longtabu}
+\end{center}
+
+%%%%%%%%%%%%%%%%%% STREAMER CONTROLLER %%%%%%%%%%%%%%%%%% 
+
+\subsubsection{Streamer\_Controller}
+\begin{center}
+	\includegraphics[width=17cm]{{./imgs/stores/streamer_controller}}
+\end{center}
+
+\begin{center}
+\begin{longtabu} to \textwidth {| m{5cm} | m{5cm} | m{5cm} |}
+\caption{Các trường} \\
+   \hline \textbf{Tên}  & \textbf{Kiểu} & \textbf{Mô tả}  \\ \hline
+   \endfirsthead
+   \hline \textbf{Tên}  & \textbf{Kiểu} & \textbf{Mô tả}  \\ \hline
+   \endhead
+      streamprocedure & Procedure  & Làm việc với dữ liệu stream
+      \\ \hline
+      filePathImage & assetImage  & Làm việc với dữ liệu loại hình ảnh
+      \\ \hline
+      filePathVideo & storageRecord  & Làm việc với dữ liệu video
+      \\ \hline
+      upload & uploadRecord  & Làm việc với dữ liệu stream
+      \\ \hline
+\end{longtabu}
+\end{center}
+
+\begin{center}
+\begin{longtabu} to \textwidth {| m{3cm} | m{4cm} | m{4cm} | m{4cm} |}
+\caption{Các phương thức} \\
+   \hline \textbf{Tên}  & \textbf{Tham số} & \textbf{Kiểu trả về}  & \textbf{Mô tả}  \\ \hline
+   \endfirsthead
+   \hline \textbf{Tên}  & \textbf{Tham số} & \textbf{Kiểu trả về}  & \textbf{Mô tả}  \\ \hline
+   \endhead
+      RoomInfo & roomName, idUser & View Room cụ thể & Truy vấn room hiển thị lên layout
+      \\ \hline
+      Rooms & search  & View List Room & Hiển thị danh sách room
+      \\ \hline
+      Tags &   & View List tag  & Hiển thị danh sách tag
+      \\ \hline
+      OnStart & userId, title, description, tag, thumbnail & View liveStream  & Bắt đầu khởi tạo video
+      \\ \hline
+      OnEnd & roomId, streamerId, status  & View liveStream  & Kết thúc video
+      \\ \hline
+      Like & StreamerId, likes  & View room  & Hiển thị số lượt thích
+      \\ \hline
+      Snap & fileName, UserId, image  & View liveStream  & Thêm hình ảnh
+      \\ \hline
+      Snap & fileName, UserId, image  & View liveStream  & Thêm hình ảnh
+      \\ \hline
+      SaveRecord & UserId, title, pathRecordVideo  & View liveStream lưu video  & Thực hiện lưu video
+      \\ \hline
+      SaveRecord & UserId, title, pathRecordVideo  & View liveStream lưu video  & Thực hiện lưu video
+      \\ \hline
+      SaveRecordSnap & UserId, title, patImage  & View liveStream lưu background video  & Thực hiện lưu ảnh nền cho video
+      \\ \hline
+      Videos & UserId  & View List video  & Hiện thị danh sách video
+      \\ \hline
+      VideoAll &   & UserId, title, patImage  & Danh sách video
+      \\ \hline
+      UpdateVideo &   & UserId, title, patImage  & Danh sách video
+      \\ \hline
+      DeleteVideo & VideoId  & View List video  & Xóa video
+      \\ \hline
+\end{longtabu}
+\end{center}
+
+%%%%%%%%%%%%%%%%%% CREDENTIAL CONTROLLER %%%%%%%%%%%%%%%%%%
+
+\subsubsection{Credential\_Controller}
+\begin{center}
+	\includegraphics[width=17cm]{{./imgs/stores/credential_controller}}
+\end{center}
+
+\begin{center}
+\begin{longtabu} to \textwidth {| m{5cm} | m{5cm} | m{5cm} |}
+\caption{Các trường} \\
+   \hline \textbf{Tên}  & \textbf{Kiểu} & \textbf{Mô tả}  \\ \hline
+   \endfirsthead
+   \hline \textbf{Tên}  & \textbf{Kiểu} & \textbf{Mô tả}  \\ \hline
+   \endhead
+      credentialprocedure & CredentialProcedure  & Làm việc với dữ liệu credential
+      \\ \hline
+      jwt & jsonwebtoken  & Cung cấp vấn đề bảo mật
+      \\ \hline
+      bcrypt & bcrypt  & Cung cấp mã hóa mật khẩu
+      \\ \hline
+      autToken & resetVerifyToken  & Cung cấp mã token
+      \\ \hline
+\end{longtabu}
+\end{center}
+
+\begin{center}
+\begin{longtabu} to \textwidth {| m{3cm} | m{4cm} | m{4cm} | m{4cm} |}
+\caption{Các phương thức} \\
+   \hline \textbf{Tên}  & \textbf{Tham số} & \textbf{Kiểu trả về}  & \textbf{Mô tả}  \\ \hline
+   \endfirsthead
+   \hline \textbf{Tên}  & \textbf{Tham số} & \textbf{Kiểu trả về}  & \textbf{Mô tả}  \\ \hline
+   \endhead
+      Login & username, password   & View Form Login trang web & Truy vấn đăng nhập trang web
+      \\ \hline
+      register & username, password, nickname, email  & View Form đăng ký & Đăng ký tài khoản
+      \\ \hline
+      UpdatePassword & password  & View form cập nhật & Phương thức này dùng để cập nhập Lại password của tài khoản
+      \\ \hline
+\end{longtabu}
+\end{center}
+
+%%%%%%%%%%%%%%%%%% PAYMENT CONTROLLER %%%%%%%%%%%%%%%%%%
+
+\subsubsection{Payment\_Controller}
+\begin{center}
+	\includegraphics[width=17cm]{{./imgs/stores/payment_controller}}
+\end{center}
+
+\begin{center}
+\begin{longtabu} to \textwidth {| m{5cm} | m{5cm} | m{5cm} |}
+\caption{Các trường} \\
+   \hline \textbf{Tên}  & \textbf{Kiểu} & \textbf{Mô tả}  \\ \hline
+   \endfirsthead
+   \hline \textbf{Tên}  & \textbf{Kiểu} & \textbf{Mô tả}  \\ \hline
+   \endhead
+      paymentprocedure & PaymentProcedure  & Làm việc với kiểu dữ liệu payment
+      \\ \hline
+      jwt & Jsonwebtoken  & Cung cấp vấn đề bảo mật
+      \\ \hline
+      nodemailer & NodeMailer  & Làm việc với email
+      \\ \hline
+\end{longtabu}
+\end{center}
+
+\begin{center}
+\begin{longtabu} to \textwidth {| m{3cm} | m{4cm} | m{4cm} | m{4cm} |}
+\caption{Các phương thức} \\
+   \hline \textbf{Tên}  & \textbf{Tham số} & \textbf{Kiểu trả về}  & \textbf{Mô tả}  \\ \hline
+   \endfirsthead
+   \hline \textbf{Tên}  & \textbf{Tham số} & \textbf{Kiểu trả về}  & \textbf{Mô tả}  \\ \hline
+   \endhead
+      OptionsPurchase &  & View Option payment hiện thị & Hiện thị danh sách cách thanh toán
+      \\ \hline
+      PurchaseToken & id, amount, idUser, nickname, currency, token & View Payment chi tiết & Lịch sử thanh toán
+      \\ \hline
+      DonateToken & quantity, receiver  & View Payment chi tiết & Chuyển tiền cho người nhận
+      \\ \hline
+      GetJwtReset & email, hostOrigin & View email & Xác nhận thanh toán qua email
+      \\ \hline
+      emailSender & &  View email & Gửi mã qua email
+      \\ \hline
+\end{longtabu}
+\end{center}
+
+%%%%%%%%%%%%%%%%%% VIDEO CONTROLLER %%%%%%%%%%%%%%%%%%
+
+\subsubsection{Payment\_Controller}
+\begin{center}
+	\includegraphics[width=17cm]{{./imgs/stores/assets_video_controller}}
+\end{center}
+
+\begin{center}
+\begin{longtabu} to \textwidth {| m{5cm} | m{5cm} | m{5cm} |}
+\caption{Các trường} \\
+   \hline \textbf{Tên}  & \textbf{Kiểu} & \textbf{Mô tả}  \\ \hline
+   \endfirsthead
+   \hline \textbf{Tên}  & \textbf{Kiểu} & \textbf{Mô tả}  \\ \hline
+   \endhead
+      assetvideopathprocedure & VideoProcedure  & Làm việc với dữ liệu video
+      \\ \hline
+      path & Path  & Lấy đường dẫn 
+      \\ \hline
+      video & string  & Làm việc với kiễu dữ liệu video
+      \\ \hline
+\end{longtabu}
+\end{center}
+
+\begin{center}
+\begin{longtabu} to \textwidth {| m{3cm} | m{4cm} | m{4cm} | m{4cm} |}
+\caption{Các phương thức} \\
+   \hline \textbf{Tên}  & \textbf{Tham số} & \textbf{Kiểu trả về}  & \textbf{Mô tả}  \\ \hline
+   \endfirsthead
+   \hline \textbf{Tên}  & \textbf{Tham số} & \textbf{Kiểu trả về}  & \textbf{Mô tả}  \\ \hline
+   \endhead
+      getVideoPath & idVideo, idUser & String & Truy vấn đường dẫn video
+      \\ \hline
+\end{longtabu}
+\end{center}
+
+%%%%%%%%%%%%%%%%%% IMAGE CONTROLLER %%%%%%%%%%%%%%%%%%
+
+\subsubsection{Payment\_Controller}
+\begin{center}
+	\includegraphics[width=17cm]{{./imgs/stores/assets_image_controller}}
+\end{center}
+
+\begin{center}
+\begin{longtabu} to \textwidth {| m{5cm} | m{5cm} | m{5cm} |}
+\caption{Các trường} \\
+   \hline \textbf{Tên}  & \textbf{Kiểu} & \textbf{Mô tả}  \\ \hline
+   \endfirsthead
+   \hline \textbf{Tên}  & \textbf{Kiểu} & \textbf{Mô tả}  \\ \hline
+   \endhead
+      imagepathprocedure & ImageProcedure  & Làm việc với dữ liệu Image
+      \\ \hline
+\end{longtabu}
+\end{center}
+
+\begin{center}
+\begin{longtabu} to \textwidth {| m{3cm} | m{4cm} | m{4cm} | m{4cm} |}
+\caption{Các phương thức} \\
+   \hline \textbf{Tên}  & \textbf{Tham số} & \textbf{Kiểu trả về}  & \textbf{Mô tả}  \\ \hline
+   \endfirsthead
+   \hline \textbf{Tên}  & \textbf{Tham số} & \textbf{Kiểu trả về}  & \textbf{Mô tả}  \\ \hline
+   \endhead
+      getImagePath & filePath & String & Hiển thị hình ảnh
+      \\ \hline
+\end{longtabu}
+\end{center}
+
+
+
+%%%%%%%%%%%%%%%%%% SERVICE %%%%%%%%%%%%%%%%%%
+\subsection{Service}
+
+%%%%%%%%%%%%%%%%%% EMAIL SERVICE %%%%%%%%%%%%%%%%%%
+\subsubsection{Email Service}
+
+\begin{center}
+	\includegraphics[width=17cm]{{./imgs/diagrams/email_service}}
+\end{center}
+
+\begin{center}
+\begin{longtabu} to \textwidth {| m{3cm} | m{4cm} | m{4cm} | m{4cm} |}
+\caption{Mô tả} \\
+   \hline \textbf{Tên}  & \textbf{Tham số} & \textbf{Kiểu trả về}  & \textbf{Mô tả}  \\ \hline
+   \endfirsthead
+   \hline \textbf{Tên}  & \textbf{Tham số} & \textbf{Kiểu trả về}  & \textbf{Mô tả}  \\ \hline
+   \endhead
+      getImagePath & filePath & String & Hiển thị hình ảnh
+      \\ \hline
+\end{longtabu}
+\end{center}
+
+
+
+
+

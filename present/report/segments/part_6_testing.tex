@@ -1,0 +1,669 @@
+\chapter{KIỂM THỬ}
+
+\begin{center}
+\begin{landscape}
+\footnotesize
+\begin{longtabu} to \textwidth {| p{1cm} | p{2.5cm} | p{2.5cm} | p{4.5cm} | p{4.5cm} | p{4.5cm} | p{2cm} | p{1.5cm} |}
+\caption{Bảng kiểm thử} \\
+   \hline \textbf{STT}  & \textbf{Test Case} & \textbf{Actions} & \textbf{Input data} & \textbf{Expected Results} & \textbf{Test Results} & \textbf{Date Verified} & \textbf{Status} \\ \hline
+   \endfirsthead
+  \hline \textbf{STT}  & \textbf{Test Case} & \textbf{Actions} & \textbf{Input data} & \textbf{Expected Results} & \textbf{Test Results} & \textbf{Date Verified} & \textbf{Status} \\ \hline
+   \endhead
+      %%%%%%%%%%%%% 1 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 1
+      \end{itemize} 
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Form đăng ký  
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Tạo tài khoản 
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Nhấn vào button login
+      \item[2/] Nhấn vào đường dẫn Create Account
+      \item[3/] Nhập thông tin dữ liệu: "Nickname", "Email", "Username", "Password"
+      \item[4/] Nhấn Register
+      \end{itemize}
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] "an1234", "anntps12@gmail.com", "anntps10672", "anntps10671"
+      \item[2/] "null", "anntps12@gmail.com", "anntps10672", "anntps10671"
+      \item[3/] "\@\@\#\$", "anntps12@gmail.com", "anntps10672", "anntps10671"
+      \item[4/] "an1234", "\!\@\#2323\_\@gmail.com", "anntps10672", "anntps10671"
+      \item[4/] "an1234", "123@gmail.com", "anntps10672", "anntp10671"
+      \end{itemize}
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Hiển thị thông báo: "Register successfully"
+      \item[2/] Hiển thị thông báo: "Nick name không được để trống"
+      \item[3/] Hiển thị thông báo: "Email  chỉ được phép sử dụng các chữ cái (a-z),số (0-9), và dấu chấm"
+      \item[4/] Hiển thị thông báo: "Mật khẩu độ dài 8-16 ký tự, có ít nhất 1 chữ cái (a-z hoặc A-Z) và 1 chữ số, và không giống với tên tài khoản."
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 08/07/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed 
+      \end{itemize} 
+      \\ \hline
+      %%%%%%%%%%%%% 2 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 2 
+      \end{itemize} 
+      &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Form đăng nhập  
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Đăng nhập tài khoản 
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Nhấn vào button login
+      \item[2/] Nhập username + password
+      \item[3/] Nhấn đăng nhập
+      \end{itemize}
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] "anntps10672", "anntps10671"
+      \item[2/] "null", "null"
+      \item[3/] "123", "anntps10671"
+      \end{itemize}
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Hiển thị thông báo: "Login successfully"
+      \item[2/] Hiển thị thông báo: "Vui lòng không được để trống"
+      \item[3/] Hiển thị thông báo: "User name or password incorrect"
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 08/07/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize}
+      \\ \hline
+      %%%%%%%%%%%%% 3 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 3 
+      \end{itemize} 
+      &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Form đổi mật khẩu 
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Đổi mật khẩu tài khoản
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Nhấn vào button login chọn forgot password và điền email của tài khoản đã đăng ký để đổi mật khẩu
+      \item[2/] Sau khi có link từ email. Điều hướng tới trang đổi mật khẩu. Điền mật khẩu mới và xác nhận mật khẩu mới
+      \end{itemize}
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] "anntps10672@fpt.edu.vn"
+      \item[2/] "anntps10672"
+      \item[3/] "password", "123456"
+      \item[4/] "password", "password"
+      \end{itemize}
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Hiển thị thông báo: "Thành công. Vui lòng check email để thay đổi mật khẩu"
+      \item[2/] Hiển thị thông báo: "Định dạng email không hợp lệ"
+      \item[3/] Hiển thị thông báo: "Mật khẩu xác nhận không khớp"
+      \item[4/] Hiển thị thông báo: "Đổi mật khẩu thành công"
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 10/07/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize}
+      \\ \hline
+      %%%%%%%%%%%%% 4 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 4 
+      \end{itemize} 
+      &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Form đăng xuất 
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Đăng xuất
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Click vào menu chính sau đó clikc vào "Logout"
+      \end{itemize}
+       & 
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Hiển thị thông báo: "Đăng xuất thành công"
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 15/07/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize}
+      \\ \hline
+      %%%%%%%%%%%%% 5 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 5
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Quản lý trang 
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Điều hướng trang  
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Nhấn vào đường biểu tượng trang chủ
+      \item[2/] Từ menu chính, nhấn vào "Go Live"
+      \item[3/] Từ menu chính, nhấn vào "Profile"
+      \item[4/] Từ menu chính, nhấn vào "List Members"
+      \item[5/] Từ menu chính, nhấn vào "List Videos"
+      \item[6/] Từ menu chính, nhấn vào "Buy Tokens"
+      \end{itemize}
+       & 
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Điều hướng tới "/"
+      \item[2/] Điều hướng tới "/streamer"
+      \item[3/] Điều hướng tới "/profile:user"
+      \item[4/] Điều hướng tới "/member"
+      \item[5/] Điều hướng tới "/buy\_tokens"      
+      \end{itemize}
+       &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 08/07/2021  
+      \end{itemize}
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed 
+      \end{itemize}
+      \\ \hline
+      %%%%%%%%%%%%% 6 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 6 
+      \end{itemize} 
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item  Chuyển đổi vai trò
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Get quyền được "Live Stream" 
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Từ menu chính, click vào "Enable Live" (trừ trường hợp chưa đổi vai trò trước đó)
+      \end{itemize}
+       & 
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Hiển thị thông báo "Thành công"
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 15/07/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize} 
+      \\ \hline
+      %%%%%%%%%%%%% 7 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 7 
+      \end{itemize} 
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item  Trang live stream
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Chức năng live stream
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Điền "Title", "Description", "Tags" cho video
+      \item[2/] Click vào nút "Start" để bắt đầu live stream 
+      \end{itemize}
+       &
+       \begin{itemize}[leftmargin=*]
+      \item[1/] "title", "description", "talkshow, gaming"
+      \end{itemize}
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Hiển thị phòng ra ngoài trang chủ
+      \item[2/] Gửi email tới các user đã "Subscribe" kênh
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 20/07/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize} 
+      \\ \hline
+      %%%%%%%%%%%%% 8 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 8 
+      \end{itemize} 
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item  Trang live stream
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Các chức năng trong quá trình live stream của streamer
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Chat với người xem
+      \item[2/] Chặn chat người xem (với các trường hợp spam, thả thính)
+      \item[3/] Xem danh sách người xem đã chặn
+      \item[4/] Xem số lượt người đang xem
+      \item[5/] Ghi hình video
+      \item[6/] Kết thúc ghi hình. Thiết lập thumbnail, title cho video
+      \item[7/] Kết thúc live stream
+      \end{itemize}
+       &
+       \begin{itemize}[leftmargin=*]
+      \item[1/] "Hello con dân của ta"
+      \end{itemize}
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Người xem có thể thấy được tin nhắn từ streamer
+      \item[2/] Chặn chat và thông báo tới người bị chặn.
+      \item[3/] 
+      \item[4/] 
+      \item[5/]
+      \item[6/] Nhận được thông báo: "Đã lưu video"
+      \item[7/] Gửi thông báo kết thúc live stream tới người xem
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 07/08/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize} 
+      \\ \hline
+     %%%%%%%%%%%%% 9 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 9 
+      \end{itemize} 
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item  Trang xem video đang streaming
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Các chức năng của viewer
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Chat với streamer
+      \item[2/] Nhập số lượng tokens kèm lời nhắn để donate cho streamer
+      \item[3/] Thích 
+      \item[4/] Xem số lượt người đang xem 
+      \end{itemize}
+       &
+       \begin{itemize}[leftmargin=*]
+      \item[1/] "Hello streamer"
+      \item[2/] "100 tokens", "donate"
+      \item[3/] 
+      \item[4/] 
+      \end{itemize}
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Streamer nhận được dòng chat từ viewer
+      \item[2/] Hiển thị thông báo donate broadcast từ người xem kèm lời nhắn và số lượng token
+      \item[3/] Tăng số lượt thích phòng
+      \item[4/] 
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 07/08/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize} 
+      \\ \hline
+      %%%%%%%%%%%%% 10 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 10 
+      \end{itemize} 
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item  Donate 
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Chức năng donate
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Nhập tokens
+      \item[2/] Nhập lời nhắn
+      \end{itemize}
+       &
+       \begin{itemize}[leftmargin=*]
+      \item[1/] 1000, "Donate"
+      \item[2/] 500,  "Donate"
+      \end{itemize}
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Hiển thị thông báo "Bạn không đủ tokens"
+      \item[2/] Hiển thị thông báo "Donate thành công". Sau đó gửi thông báo broadcast tới phòng streamer
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 10/08/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize} 
+      \\ \hline
+      %%%%%%%%%%%%% 11 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 11 
+      \end{itemize} 
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item  Profile 
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Trang quản lý thông tin
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Thay đổi avatar
+      \item[2/] Thay đổi họ tên
+      \item[3/] Thay đổi nickname
+      \item[4/] Thay đổi bio
+      \end{itemize}
+       &
+       \begin{itemize}[leftmargin=*]
+      \item[1/] 
+      \item[2/] "Nguyễn Trường An"
+      \item[3/] "antn"
+      \item[4/] "Hello"
+      \end{itemize}
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Hiển thị thông báo "Thành công"
+      \item[2/] Hiển thị thông báo "Thành công"
+      \item[3/] Hiển thị thông báo "Thành công"
+      \item[4/] Hiển thị thông báo "Thành công"
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 12/08/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize} 
+      \\ \hline
+      %%%%%%%%%%%%% 12 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 12 
+      \end{itemize} 
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item  Quản lý video 
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Trang quản lý video
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Xem video ghi hình đã lưu
+      \item[2/] Chỉnh sửa thông tin video
+      \item[3/] Xoá video đã lưu
+      \end{itemize}
+       &
+       \begin{itemize}[leftmargin=*]
+      \item[1/] 
+      \item[2/] "New Title"
+      \item[3/] 
+      \end{itemize}
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] 
+      \item[2/] Hiển thị thông báo "Thành công"
+      \item[3/] Hiển thị thông báo "Xoá thành công"
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 12/08/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize} 
+      \\ \hline
+      %%%%%%%%%%%%% 13 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 13 
+      \end{itemize} 
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item  History Donate
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Lịch sử donate
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Điều hướng tới trang "/profile/history-donate"
+      \end{itemize}
+       &
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Hiển thị bảng lịch sử donate
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 12/08/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize} 
+      \\ \hline
+      %%%%%%%%%%%%% 14 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 14 
+      \end{itemize} 
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item  History Buy Tokens
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Lịch sử buy tokens
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Điều hướng tới trang "/profile/history-buy-tokens"
+      \end{itemize}
+       &
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Hiển thị bảng lịch sử buy tokens
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 12/08/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize} 
+      \\ \hline
+       %%%%%%%%%%%%% 15 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 15 
+      \end{itemize} 
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item  Search
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Chức năng tìm kiếm
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Chọn filter muốn search từ thanh bar search
+      \item[2/] Chọn filter "Video Streaming" và nhập từ khoá search
+      \item[2/] Chọn filter "Videos" và nhập từ khoá search
+      \item[2/] Chọn filter "Members Streaming" và nhập từ khoá search
+      \end{itemize}
+       &
+      \begin{itemize}[leftmargin=*]
+      \item[1/]
+      \item[2/] "freetalk"
+      \item[3/] "lol"
+      \item[4/] "nltbao"
+      \end{itemize}
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Hiện icon filter đã chọn lên thanh bar search
+      \item[2/] Điều hướng đang "home", hiện phòng online theo từ khoá search
+      \item[3/] Điều hướng đang "videos", hiện phòng online theo từ khoá search
+      \item[4/] Điều hướng đang "members", hiện phòng online theo từ khoá search
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 12/08/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize} 
+      \\ \hline
+      %%%%%%%%%%%%% 16 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 16 
+      \end{itemize} 
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item  List Members
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Xem danh sách user
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Điều hướng tới trang "/members"
+      \end{itemize}
+       &
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Hiển thị toàn bộ danh sách members
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 12/08/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize} 
+      \\ \hline
+       %%%%%%%%%%%%% 17 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 17 
+      \end{itemize} 
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item  List Videos
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Xem danh sách videos
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Điều hướng tới trang "/video"
+      \end{itemize}
+       &
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Hiển thị toàn bộ danh sách videos
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 12/08/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize} 
+      \\ \hline
+      %%%%%%%%%%%%% 18 %%%%%%%%%%%%%
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 18 
+      \end{itemize} 
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Statistics
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Xem thống kê doanh thu, lượt theo dõi + ưu thích
+      \end{itemize}
+      & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Điều hướng tới trang "/statistics"
+      \end{itemize}
+       &
+       & 
+      \begin{itemize}[leftmargin=*]
+      \item[1/] Hiển thị các biểu đồ thống kê
+      \end{itemize}
+        &
+      \begin{itemize}[leftmargin=*,label={}]
+      \item 12/08/2021 
+      \end{itemize} 
+        & 
+      \begin{itemize}[leftmargin=*,label={}]
+      \item Passed
+      \end{itemize} 
+      \\ \hline
+     \end{longtabu}
+\end{landscape}
+\end{center}
+
+
+

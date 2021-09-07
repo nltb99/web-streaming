@@ -1,0 +1,62 @@
+\babel@toc {nil}{}
+\contentsline {chapter}{\numberline {1}MỞ ĐẦU}{3}{}%
+\contentsline {section}{\numberline {1.1}Giới Thiệu}{3}{}%
+\contentsline {subsection}{\numberline {1.1.1}Lý do chọn đề tài}{3}{}%
+\contentsline {subsection}{\numberline {1.1.2}Ý tưởng của đề tài}{3}{}%
+\contentsline {subsection}{\numberline {1.1.3}Mục tiêu của dự án}{3}{}%
+\contentsline {section}{\numberline {1.2}Ban Thành Viên Dự Án}{4}{}%
+\contentsline {chapter}{\numberline {2}KHẢO SÁT}{6}{}%
+\contentsline {section}{\numberline {2.1}Yêu Cầu Của Khách Hàng}{6}{}%
+\contentsline {section}{\numberline {2.2}Các Chức Năng Cho Hệ Thống}{6}{}%
+\contentsline {section}{\numberline {2.3}Lập kế hoạch dự án}{7}{}%
+\contentsline {chapter}{\numberline {3}PHÂN TÍCH}{9}{}%
+\contentsline {section}{\numberline {3.1}Mô Hình}{9}{}%
+\contentsline {subsection}{\numberline {3.1.1}Mô hình triển khai hệ thống}{9}{}%
+\contentsline {subsection}{\numberline {3.1.2}Mô tả sơ đồ}{9}{}%
+\contentsline {section}{\numberline {3.2}Sơ Đồ Use Case}{10}{}%
+\contentsline {subsection}{\numberline {3.2.1}Tổng quan}{10}{}%
+\contentsline {subsection}{\numberline {3.2.2}Use case cho viewer}{10}{}%
+\contentsline {subsection}{\numberline {3.2.3}Use case cho streamer}{11}{}%
+\contentsline {section}{\numberline {3.3}Đặc Tả Hệ Thống}{11}{}%
+\contentsline {subsection}{\numberline {3.3.1}Chi tiết dành cho Viewer}{11}{}%
+\contentsline {subsection}{\numberline {3.3.2}Chi tiết dành cho Streamer}{12}{}%
+\contentsline {chapter}{\numberline {4}THIẾT KẾ}{13}{}%
+\contentsline {section}{\numberline {4.1}Mô Hình Công Nghệ}{13}{}%
+\contentsline {subsection}{\numberline {4.1.1}Tổng quan công nghệ}{13}{}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}WebSocket}{13}{}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}Giao thức TCP/IP}{14}{}%
+\contentsline {paragraph}{Giao thức được chia thành các tầng mạng trong mô hình OSI}{14}{}%
+\contentsline {subsubsection}{\numberline {4.1.1.3}NodeJS}{15}{}%
+\contentsline {subsubsection}{\numberline {4.1.1.4}MySQL}{16}{}%
+\contentsline {section}{\numberline {4.2}Mô Hình Triển Khai}{16}{}%
+\contentsline {section}{\numberline {4.3}Thiết Kế Giao Diện}{17}{}%
+\contentsline {subsection}{\numberline {4.3.1}Sitemap}{17}{}%
+\contentsline {subsection}{\numberline {4.3.2}Giao diện chức năng}{18}{}%
+\contentsline {section}{\numberline {4.4}Thiết Kế Dữ Liệu}{30}{}%
+\contentsline {subsection}{\numberline {4.4.1}Sơ đồ thực thể ERD}{30}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}Tổng quan ERD}{30}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.2}Chi tiết ERD}{31}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.3}Chi tiết các thực thể}{31}{}%
+\contentsline {section}{\numberline {4.5}Stored Procedure}{35}{}%
+\contentsline {chapter}{\numberline {5}THỰC HIỆN}{39}{}%
+\contentsline {section}{\numberline {5.1}Giao Diện}{39}{}%
+\contentsline {section}{\numberline {5.2}Sơ Đồ Kiến Trúc Công Nghệ}{43}{}%
+\contentsline {section}{\numberline {5.3}Các Loại Sơ Đồ}{43}{}%
+\contentsline {subsection}{\numberline {5.3.1}Controller}{43}{}%
+\contentsline {subsubsection}{\numberline {5.3.1.1}User\_Controller}{43}{}%
+\contentsline {subsubsection}{\numberline {5.3.1.2}Streamer\_Controller}{44}{}%
+\contentsline {subsubsection}{\numberline {5.3.1.3}Credential\_Controller}{45}{}%
+\contentsline {subsubsection}{\numberline {5.3.1.4}Payment\_Controller}{46}{}%
+\contentsline {subsubsection}{\numberline {5.3.1.5}Payment\_Controller}{47}{}%
+\contentsline {subsubsection}{\numberline {5.3.1.6}Payment\_Controller}{47}{}%
+\contentsline {subsection}{\numberline {5.3.2}Service}{48}{}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}Email Service}{48}{}%
+\contentsline {chapter}{\numberline {6}KIỂM THỬ}{49}{}%
+\contentsline {chapter}{\numberline {7}ĐÓNG GÓI}{56}{}%
+\contentsline {section}{\numberline {7.1}Sản Phẩm Phần Mềm}{56}{}%
+\contentsline {section}{\numberline {7.2}Hướng Dẫn Cài Đặt}{56}{}%
+\contentsline {chapter}{\numberline {8}KẾT LUẬN}{57}{}%
+\contentsline {section}{\numberline {8.1}Thuận Lợi}{57}{}%
+\contentsline {section}{\numberline {8.2}Khó Khăn}{57}{}%
+\contentsline {section}{\numberline {8.3}Hướng Phát Triển}{57}{}%
+\contentsfinish 

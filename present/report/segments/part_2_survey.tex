@@ -1,0 +1,100 @@
+\chapter{KHẢO SÁT}
+\section{Yêu Cầu Của Khách Hàng}
+\textbf{Website Live Streaming} là ứng dụng nhằm đắp ứng nhu cầu trao giao tiếp, kết bạn và trao đổi thông tin bằng văn bản hay các video theo từng đề tài thông qua một số \textbf{channel} nên sẽ được chia làm hai phần chính gồm.
+ \begin{itemize}
+ 	\item \textbf{Streamer}: Người phát sóng trực tiếp chia sẻ nội dung cho người xem.
+	\item \textbf{Viewer}: Người xem những nội dung đã và đang chia sẻ từ Streamer. Có thể tương tác trực tiếp tới streamer qua các hình thức \textbf{like,comment,donate}.
+ \end{itemize}
+
+\section{Các Chức Năng Cho Hệ Thống}
+\begin{itemize}
+	\item Xác thực người dùng
+ 		\begin{itemize}
+   			 \item Đăng ký tài khoản.
+			 \item Đổi mật khẩu.
+   			 \item Đăng nhập/đăng xuất.
+ 		 \end{itemize}
+	 \item Quản lý tài khoản và channel
+ 		\begin{itemize}
+   			 \item Chỉnh sửa thông tin cá nhân của tài khoản, có thể chuyển đổi vai trò, dùng \textbf{visa} để thanh toán.
+   			 \item Mỗi tài khoản với vai trò streamer sẽ được cấp một mã phòng cố định dựa theo \textbf{nickname} (nickname có thể tuỳ biến) để có thể livestream. Trước khi bắt đầu phát sóng, streamer sẽ tự chọn hashtag, đặt tiêu đề và viết mô tả cho video của mình. Khi bắt đầu livestream, hệ thống sẽ tự gửi mail cho các tài khoản đã theo dõi kênh.
+			 \item Theo dõi channel: mỗi tài khoản có thể đăng ký kênh mà họ yêu thích và được thông báo.
+			\item Quy đổi xèng sang tiền.
+			\item Tìm kiếm các video đang phát sóng theo chủ đề/tên tài khoản/ngày tháng.
+ 	 	\end{itemize}
+	\item Tương tác trong quá trình phát sóng
+		\begin{itemize}
+			\item Thích.
+			\item Bình luận.
+			\item Donate.
+		\end{itemize}
+	\item Đề xuất cho các chức năng
+		\begin{itemize}
+			\item Mỗi tài khoản có thể tạo nhiều kênh cho phòng livestream. Có thể spam bất kỳ tài khoản.
+			\item Thông báo livestream của kênh thông qua tin nhắn thông báo, email.
+			\item Đề xuất các video, channel đang đứng top và có nhiều lượt xem.
+		\end{itemize}
+\end{itemize}
+
+\section{Lập kế hoạch dự án}
+
+ \begin{center}
+\begin{longtabu} to \textwidth {| m{1cm} | m{3cm} | m{2cm} | m{2cm} | m{3cm} | m{3cm} | m{1cm} |}
+\hline STT & \textbf{Công việc} & \textbf{Bắt đầu} & \textbf{Kết thúc} & \textbf{Thành viên} & \textbf{Tình trạng} & \textbf{Ghi chú}\\ \hline
+\endfirsthead
+\hline \textbf{STT} & \textbf{Công việc} & \textbf{Bắt đầu} & \textbf{Kết thúc} & \textbf{Thành viên} & \textbf{Tình trạng} & \textbf{Ghi chú}\\ \hline
+\endhead
+\hline
+\endfoot
+\multicolumn{1}{|c|}{\textbf{1}} & \multicolumn{5}{|c|}{\textbf{Phân tích yêu cầu khách hàng}} &   
+\\ \hline
+\multicolumn{1}{|c|}{1.1} & Xây dựng bản đặc tả hệ thống & 05/05/2021 & 05/05/2021 & Cả nhóm & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{1.2} & Vẽ use case & 05/05/2021 & 05/05/2021 & Viễn & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{1.3} & Vẽ sơ đồ tổng quan   & 05/05/2021 & 05/05/2021 & Viễn & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{\textbf{2}} & \multicolumn{5}{|c|}{\textbf{Thiết kế hệ thống}} &  
+\\ \hline
+\multicolumn{1}{|c|}{2.1} & Phát thảo mô hình công nghệ ứng dụng & 05/05/2021 & 05/05/2021 & Cả nhóm & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{2.2} & Phát thảo layout & 05/05/2021 & 05/05/2021 &  An & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{2.3} & Phái thảo giao diện các chức năng & 05/05/2021 & 05/05/2021 & An & Đã hoàn thành &    
+\\ \hline
+\multicolumn{1}{|c|}{2.4} & Thiết kế sơ đồ quan hệ thực thể (ERD) & 05/05/2021 & 05/05/2021 & Viễn & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{2.5} & Thiết kế các chi tiết thực thể & 05/05/2021 & 05/05/2021 & Bảo, Khôi, Viễn  & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{\textbf{3}} & \multicolumn{5}{|c|}{\textbf{Thực hiện dự án}} &   
+\\ \hline
+\multicolumn{1}{|c|}{3.1} & Thiết kế cơ sở dữ liệu & 05/05/2021 & 05/05/2021 & Cả nhóm & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{3.2} & Thiết kế giao diện & 05/05/2021 & 05/05/2021 & Cả nhóm & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{3.3} & Xây dựng các thư viện tiện ích& 05/05/2021 & 05/05/2021 & Cả nhóm & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{3.4} & Viết các store procedure & 05/05/2021 & 05/05/2021 & Cả nhóm & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{3.5} & Lập trình các chức năng nghiệp vụ & 05/05/2021 & 05/05/2021 & Cả nhóm & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{3.5} & Xây dựng các chức năng cho live stream + tương tác & 05/05/2021 & 05/05/2021 & Bảo, Khôi & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{3.6} & Xây dựng trang thống kê & 05/05/2021 & 05/05/2021 & Bảo, Viễn & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{\textbf{4}} & \multicolumn{5}{|c|}{\textbf{Kiểm thử}} &   
+\\ \hline
+\multicolumn{1}{|c|}{4.1} & Xây dựng kịch bản kiểm thử & 05/05/2021 & 05/05/2021 & Khôi, An & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{4.2} & Thực hiện kiểm thử & 05/05/2021 & 05/05/2021 & Khôi, An & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{\textbf{5}} & \multicolumn{5}{|c|}{\textbf{Đóng gói sản phẩm}} &   
+\\ \hline
+\multicolumn{1}{|c|}{5.1} & Đóng gói sản phẩm & 05/05/2021 & 05/05/2021 & Bảo & Đã hoàn thành &  
+\\ \hline
+\multicolumn{1}{|c|}{5.2} & Viết tài liệu hướng dẫn sử dụng & 05/05/2021 & 05/05/2021 & Bảo & Đã hoàn thành &  
+\end{longtabu} 
+\end{center}
+
+
+

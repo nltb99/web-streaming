@@ -1,0 +1,104 @@
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage[utf8]{inputenc} 
+\usepackage{babel}
+\usepackage{fancyheadings}  
+\usepackage[utf8]{vietnam} 
+\usepackage[top=0.70in, bottom=0.70in, left=0.8in,right=0.80in]{geometry} 
+\usepackage[pdftex]{graphicx} 
+\usepackage{url}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{titletoc}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{tabulary}
+\usepackage{float}
+\usepackage{indentfirst} 
+\usepackage{mathptmx}
+\usepackage{tabu}
+\usepackage{caption}
+\usepackage{lscape}
+\usepackage{pifont}
+\usepackage{enumitem}
+\usepackage{lmodern}
+
+
+% Long Table Padding
+\tabulinesep=3pt
+% Caption Table Position
+\captionsetup[tabu]{position=below}
+% CONFIG DEPTH TABLE
+\setcounter{tocdepth}{2} 
+\setcounter{secnumdepth}{3}
+
+% VARIABLE
+\newcommand{\quotes}[1]{``#1''}
+\newcommand{\single}[1]{`#1'}
+
+% HEADER | FOOTER
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\leftmark}
+\fancyhead[LE,RO]{\rightmark}
+\fancyfoot[CE,CO]{Website live streaming}
+\fancyfoot[LE,RO]{\thepage}
+
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+% BEGIN 
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+	\huge{TRƯỜNG CAO ĐẲNG THỰC HÀNH FPT} \\[10pt]
+	\large{-----------------------------------------------------} \\ [10pt]
+	\vspace{0.5cm}
+	\includegraphics[scale=1]{{./imgs/fpt.png}}
+\end{center}
+
+\vspace{1cm}
+
+\begin{center}
+	\textbf{{\Huge BÁO CÁO DỰ ÁN TỐT NGHIỆP}}\\
+	\LARGE{Ngành Ứng Dụng Phần Mềm}\\
+	\vspace{1cm}
+	\rule{\textwidth}{0.5pt} \\[10pt]
+	\textbf{\huge{WEBSITE LIVE STREAMING}}\\ 
+	\rule{\textwidth}{0.5pt}
+\end{center}
+
+\vspace{1cm}
+
+\begin{table}[h]
+\Large
+\begin{tabular}{rrl}
+\hspace{3 cm} & \textbf{GVHD:} &\textbf{Thầy Nguyễn Nghiệm}\\
+& \textbf{LỚP:} & \textbf{UD15201}\\
+& SV: & Nguyễn Lê Tiến Bảo - PS11095\\
+& & Mai Kỷ Viễn - PS10996 \\
+& & Nguyễn Minh Khôi - PS11136\\
+& & Nguyễn Trường An - PS10672 \\
+\end{tabular}
+\end{table}
+
+\vspace{3cm}
+
+\begin{center}
+{\footnotesize \Large\today}
+\end{center}
+\end{titlepage}
+
+ \tableofcontents
+ \input{./segments/part_1_intro.tex}
+ \input{./segments/part_2_survey.tex}
+ \input{./segments/part_3_analysis.tex}
+\input{./segments/part_4_design.tex}
+\input{./segments/part_5_implementation.tex}
+\input{./segments/part_6_testing.tex}
+ \input{./segments/part_7_packaging.tex}
+ \input{./segments/part_8_conclusion.tex}
+
+\end{document}
